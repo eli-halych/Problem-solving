@@ -1,0 +1,1 @@
+CMakeLists.txt not found in /home/ihalych/CLionProjects/Think_Like_A_Programmer/Chapter1/Sudoku
