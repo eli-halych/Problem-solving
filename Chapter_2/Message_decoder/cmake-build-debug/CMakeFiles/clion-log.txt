@@ -1,1 +1,0 @@
-CMakeLists.txt not found in /home/ihalych/CLionProjects/Think_Like_A_Programmer/Chapter_2/Message_decoder
