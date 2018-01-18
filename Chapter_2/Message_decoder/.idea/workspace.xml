@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
+    <generated>
+      <config projectName="Message_decoder" targetName="Message_decoder" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b710eea3-b983-44f5-a68f-9c7b267e47f1" name="Default" comment="" />
+    <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/main.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="116" column="6" lean-forward="true" selection-start-line="116" selection-start-column="6" selection-end-line="116" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>\#include \&lt;iostream\&gt;\nusing std\:\:cin\;\nusing std\:\:cout\;\nusing std\:\:endl\;\n\nint main\(\) \{\n\/\/    cout \&lt;\&lt; \&quot;Enter a sequence of numbers using commas and not using spaces\: \&quot; \&lt;\&lt; endl\;\n\/\/    char digitChar\;\n\/\/\n\/\/    do\{\n\/\/\n\/\/        digitChar \= cin\.get\(\)\;\n\/\/        int number \= \(digitChar \- \'0\'\)\;\n\/\/\n\/\/        digitChar \= cin\.get\(\)\;\n\/\/        while \(\(digitChar \!\= 10\) \&amp;\&amp; \(digitChar \!\= \'\,\'\)\)\{\n\/\/            number \= number \* 10 \+ \(digitChar \- \'0\'\)\;\n\/\/            digitChar \= cin\.get\(\)\;\n\/\/        \}\n\/\/\n\/\/        cout \&lt;\&lt; \&quot;The number is \&quot; \&lt;\&lt; number \&lt;\&lt; endl\;\n\/\/    \}while\(digitChar \!\=  10\)\;\n\n\n\/\/    cout \&lt;\&lt; \&quot;Enter a number 1\-26\: \&quot;\;\n\/\/    int number\;\n\/\/    cin \&gt;\&gt; number\;\n\/\/    char outputChar\;\n\/\/\n\/\/    outputChar \= \(number\-1\) \+ \'A\'\;\n\/\/    cout \&lt;\&lt; \&quot;Equivalent symbol is \&quot; \&lt;\&lt; outputChar \&lt;\&lt; endl\;\n\n\n\/\/    cout \&lt;\&lt; \&quot;Enter a number 1\-26\: \&quot;\;\n\/\/    int number\;\n\/\/    cin \&gt;\&gt; number\;\n\/\/    char outputChar\;\n\/\/\n\/\/    outputChar \= \(number\-1\) \+ \'a\'\;\n\/\/    cout \&lt;\&lt; \&quot;Equivalent symbol is \&quot; \&lt;\&lt; outputChar \&lt;\&lt; endl\;\n\n\n\/\/    cout \&lt;\&lt; \&quot;Enter a number 1\-8\: \&quot;\;\n\/\/    int number\;\n\/\/    cin \&gt;\&gt; number\;\n\/\/    char outputChar\;\n\/\/\n\/\/    switch \(number\)\{\n\/\/        case 1\: outputChar \= \'\!\'\;\n\/\/            break\;\n\/\/        case 2\: outputChar \= \'\?\'\;\n\/\/            break\;\n\/\/        case 3\: outputChar \= \'\,\'\;\n\/\/            break\;\n\/\/        case 4\: outputChar \= \'\.\'\;\n\/\/            break\;\n\/\/        case 5\: outputChar \= \' \'\;\n\/\/            break\;\n\/\/        case 6\: outputChar \= \'\;\'\;\n\/\/            break\;\n\/\/        case 7\: outputChar \= \'\&quot;\'\;\n\/\/            break\;\n\/\/        case 8\: outputChar \= \'\\\'\'\;\n\/\/            break\;\n\/\/    \}\n\/\/\n\/\/    cout \&lt;\&lt; \&quot;Equivalent symbol is \&quot; \&lt;\&lt; outputChar \&lt;\&lt; endl\;\n\n\n\/\/    enum modeType \{ UPPERCASE\, LOWERCASE\, PUNCTUATION \}\;\n\/\/    int number\;\n\/\/    modeType mode \= UPPERCASE\;\n\/\/    cout \&lt;\&lt; \&quot;Enter some numbers ending with \-1\: \&quot;\;\n\/\/    do\{\n\/\/        cin \&gt;\&gt; number\;\n\/\/        cout \&lt;\&lt; \&quot;Number read\&quot; \&lt;\&lt; number\;\n\/\/        switch \(mode\) \{\n\/\/            case UPPERCASE\:\n\/\/                number \= number \% 27\;\n\/\/                cout \&lt;\&lt; \&quot;Modulo 27\: \&quot; \&lt;\&lt; number\;\n\/\/                if \(number \=\= 0\)\{\n\/\/                    cout \&lt;\&lt; \&quot;Switch to LOWERCASE\&quot;\;\n\/\/                    mode \= LOWERCASE\;\n\/\/                \}\;\n\/\/                break\;\n\/\/            case LOWERCASE\:\n\/\/                number \= number \% 27\;\n\/\/                cout \&lt;\&lt; \&quot;Modulo 27\: \&quot; \&lt;\&lt; number\;\n\/\/                if \(number \=\= 0\)\{\n\/\/                    cout \&lt;\&lt; \&quot;Switch to PUNCTUATION\&quot;\;\n\/\/                    mode \= PUNCTUATION\;\n\/\/                \}\;\n\/\/                break\;\n\/\/            case PUNCTUATION\:\n\/\/                number \= number \% 9\;\n\/\/                cout \&lt;\&lt; \&quot;Modulo 9\: \&quot; \&lt;\&lt; number\;\n\/\/                if \(number \=\= 0\)\{\n\/\/                    cout \&lt;\&lt; \&quot;Switch to UPPERCASE\&quot;\;\n\/\/                    mode \= UPPERCASE\;\n\/\/                \}\;\n\/\/                break\;\n\/\/        \}\n\/\/        cout \&lt;\&lt; endl\;\n\/\/    \} while \(number \!\= \-1\)\;\n\n\n\n    char outputChar\;\n    enum modeType \{ UPPERCASE\, LOWERCASE\, PUNCTUATION \}\;\n    int number\;\n    modeType mode \= UPPERCASE\;\n    char digitChar\;\n    do\{\n\n        digitChar \= cin\.get\(\)\;\n        int number \= \(digitChar \- \'0\'\)\;\n\n        digitChar \= cin\.get\(\)\;\n        while \(\(digitChar \!\= 10\) \&amp;\&amp; \(digitChar \!\= \'\,\'\)\)\{\n            number \= number \* 10 \+ \(digitChar \- \'0\'\)\;\n            digitChar \= cin\.get\(\)\;\n        \}\n        switch \(mode\) \{\n            case UPPERCASE\:\n                number \= number \% 27\;\n                outputChar \= number \+ \'A\' \- 1\;\n                if \(number \=\= 0\)\{\n                    mode \= LOWERCASE\;\n                    continue\;\n                \}\;\n                break\;\n            case LOWERCASE\:\n                number \= number \% 27\;\n                outputChar \= number \+ \'a\' \- 1\;\n                if \(number \=\= 0\)\{\n                    mode \= PUNCTUATION\;\n                    continue\;\n                \}\;\n                break\;\n            case PUNCTUATION\:\n                number \= number \% 9\;\n                    switch \(number\)\{\n        case 1\: outputChar \= \'\!\'\;\n            break\;\n        case 2\: outputChar \= \'\?\'\;\n            break\;\n        case 3\: outputChar \= \'\,\'\;\n            break\;\n        case 4\: outputChar \= \'\.\'\;\n            break\;\n        case 5\: outputChar \= \' \'\;\n            break\;\n        case 6\: outputChar \= \'\;\'\;\n            break\;\n        case 7\: outputChar \= \'\&quot;\'\;\n            break\;\n        case 8\: outputChar \= \'\\\'\'\;\n            break\;\n    \}\n                break\;\n        \}\n        cout \&lt;\&lt; endl\;\n    \} while \(number \!\= \-1\)\;\n\n\n\n    \}while\(digitChar \!\=  10\)\;\n\n\n    return 0\;\n\}</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/main.cpp" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="4">
+    <option name="y" value="27" />
+    <option name="width" value="800" />
+    <option name="height" value="873" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.Message_decoder">
+    <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Message_decoder" RUN_TARGET_NAME="Message_decoder" EXPLICIT_BUILD_TARGET_NAME="all">
+      <envs />
+    </configuration>
+    <configuration name="Message_decoder" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Message_decoder" TARGET_NAME="Message_decoder" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Message_decoder" RUN_TARGET_NAME="Message_decoder">
+      <envs />
+    </configuration>
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue="Application.Build All" />
+      <item index="1" class="java.lang.String" itemvalue="Application.Message_decoder" />
+    </list>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b710eea3-b983-44f5-a68f-9c7b267e47f1" name="Default" comment="" />
+      <created>1516213422683</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1516213422683</updated>
+      <workItem from="1516213424076" duration="13280000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="13280000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="27" width="800" height="873" extended-state="4" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298153" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19261214" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/main.cpp</url>
+          <line>14</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/main.cpp</url>
+          <line>34</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/main.cpp</url>
+          <line>43</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/main.cpp</url>
+          <line>52</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/main.cpp</url>
+          <line>80</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/main.cpp</url>
+          <line>124</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="14" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="breakpointLogExpression">
+      <expression>
+        <expression-string>number = number * 10 + (digitChar - '0');
+            digitChar = cin.get();
+        }</expression-string>
+        <language-id>ObjectiveC</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="116" column="6" lean-forward="true" selection-start-line="116" selection-start-column="6" selection-end-line="116" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
