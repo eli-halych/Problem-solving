@@ -3,6 +3,20 @@ using std::cin;
 using std::cout;
 using std::endl;
 
+
+/*
+ * This is what is does:
+ * ##
+ * ####
+ * ######
+ * ########
+ * ########
+ * ######
+ * ####
+ * ##
+ *
+ */
+
 int main() {
 
     //upper half
