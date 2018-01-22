@@ -6,9 +6,6 @@
  */
 
 #include <iostream>
-#include <cmath>
-#include <string>
-#include <sstream>
 
 
 using namespace std;
@@ -25,39 +22,24 @@ void convert(int number, int base){
     }
 
     remainder = number % base;
-    cout << number << " % " << base << " = " << remainder << endl;
-    convert(number/base, base);
-    cout << number << " / " << base << " = " << number/base << endl;
-    ::value.append(to_string(remainder));
+    convert(number/base, base); // the recursion will let us get the result backwards
+    ::value.append(to_string(remainder)+" ");
 };
 
 
 
 int main() {
 
-    cout << "Convert from base(min 2, max 36): ";
-    int from;
-    cin >> from;
-
-    cout << "To base (min 2, max 36): ";
-    int to;
-    cin >> to;
-
-    cout << "Enter a positive integer of base " << from << ": ";
+    cout << "Enter a positive base-10 integer: ";
     int number;
     cin >> number;
 
-    //convert the base to the one we need to convert from
-    convert(to, from);
-    cout << "convert base: " << ::value << endl;
-    stringstream geek(::value);
+    cout << "Convert to base: ";
     int base;
-    geek >> base;
-    cout << "Converted base to int: " << base << endl;
-    ::value = "";
-    convert(number, base); // here the problem
-    cout << "convert num: " << ::value << endl;
-    cout << "Base-" << from << " number " << number << " to base " << to << ": " << ::value;
+    cin >> base;
+
+    convert(number, base);
+    cout << "Base-10 number " << number << " to base " << base << ": " << ::value;
 
     return 0;
 }
