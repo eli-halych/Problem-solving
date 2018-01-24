@@ -1,0 +1,3 @@
+/home/ihalych/CLionProjects/Think_Like_A_Programmer/Chapter-3/Substitution-cipher-problem/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/ihalych/CLionProjects/Think_Like_A_Programmer/Chapter-3/Substitution-cipher-problem/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/ihalych/CLionProjects/Think_Like_A_Programmer/Chapter-3/Substitution-cipher-problem/cmake-build-debug/CMakeFiles/Substitution_cipher_problem.dir
