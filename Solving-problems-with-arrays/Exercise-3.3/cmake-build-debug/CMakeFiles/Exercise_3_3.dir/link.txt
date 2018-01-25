@@ -1,1 +1,0 @@
-/usr/lib64/ccache/c++  -g   CMakeFiles/Exercise_3_3.dir/main.cpp.o  -o Exercise_3_3 
