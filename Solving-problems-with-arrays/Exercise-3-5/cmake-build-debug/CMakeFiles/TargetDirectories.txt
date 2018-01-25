@@ -1,3 +1,0 @@
-/home/ihalych/CLionProjects/Think_Like_A_Programmer/Chapter-3/Exercise-3-5/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/ihalych/CLionProjects/Think_Like_A_Programmer/Chapter-3/Exercise-3-5/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/ihalych/CLionProjects/Think_Like_A_Programmer/Chapter-3/Exercise-3-5/cmake-build-debug/CMakeFiles/Exercise_3_5.dir
