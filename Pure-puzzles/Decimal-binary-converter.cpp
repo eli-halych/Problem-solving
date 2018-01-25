@@ -1,6 +1,6 @@
 /*
  *
- * Binary-to-decimal and decimal-to-binary converters
+ * Binary-to-decimal converter and the reverse
  *
  */
 
