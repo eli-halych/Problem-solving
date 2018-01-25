@@ -1,8 +1,8 @@
 
 /*
  *
- * Code that uses the function qsort() to sort an array of the student struct.
- * First it sorts it by grade, then it sorts it again using student ID.
+ * Use the function qsort() to sort an array of the student struct.
+ * First sort it by grade, then sort it again using student ID.
  *
  */
 
