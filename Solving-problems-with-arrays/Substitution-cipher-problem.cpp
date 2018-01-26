@@ -19,30 +19,80 @@ using std::string;
 using std::toupper;
 using std::locale;
 
-void encode(string plaintext, const char * cipher);
+string toUpper(string plaintext);
+string encode(string plaintext, const char * cipher);
+string decode(string plaintext, const char * cipher);
 
 int main() {
 
     const char * cipher = "QWERTYUIOPASDFGHJKLZXCVBNM";
-    string plaintext = "This message is to be encoded...";
 
-    encode(plaintext, cipher);
+    string plaintext = "This message is to be encoded...";
+//    string plaintext = "abcdefghijklmnopqrstuvwxyz";
+    plaintext = toUpper(plaintext);
+    cout << "The original message: " << plaintext << endl;
+
+    string encoded = encode(plaintext, cipher);
+    cout << "The encoded message: " << encoded << endl;
+
+    string decoded = decode(encoded, cipher);
+    cout << "The decoded message: " << decoded << endl;
 
     return 0;
 }
 
-void encode(string plaintext, const char * cipher){
+string encode(string plaintext, const char * cipher){
 
-    locale loc;
-    for (string::size_type i = 0; i < plaintext.length(); ++i) {
-
-        plaintext[i] = toupper(plaintext[i], loc);
+    for (int i = 0; i < plaintext.length(); ++i) {
 
         // skip chars other than uppercase letters
         if ((plaintext[i] > 64) && (plaintext[i] < 91)) {
-            plaintext[i] = cipher[plaintext[i] - 'A' + 1];
+
+            char firstLetter = 'A';
+            unsigned int alphaOffset = plaintext[i] - firstLetter;
+            plaintext[i] = cipher[alphaOffset];
+
         }
     }
 
-    cout << plaintext;
+    return plaintext;
+}
+
+string decode(string plaintext, const char * cipher){
+
+
+    for (int i = 0; i < plaintext.length(); ++i) {
+
+        // skip chars other than uppercase letters
+        if ((plaintext[i] > 64) && (plaintext[i] < 91)) {
+
+            char firstLetter = 'A';
+            unsigned int alphaOffset = plaintext[i] - firstLetter;
+
+            char temp = plaintext[i];
+            int indexInCipher;
+            for (int j = 0; j < 26; ++j) {
+                if (temp == cipher[j]) {
+                    indexInCipher = j;
+                    break;
+                }
+            }
+
+            plaintext[i] = indexInCipher + firstLetter;
+
+        }
+
+    }
+
+    return plaintext;
+}
+
+string toUpper(string plaintext){
+
+    locale loc;
+    for (string::size_type i = 0; i < plaintext.length(); ++i) {
+        plaintext[i] = toupper(plaintext[i], loc);
+    }
+
+    return plaintext;
 }
