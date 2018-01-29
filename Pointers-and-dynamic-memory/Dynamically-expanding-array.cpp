@@ -47,7 +47,6 @@ int main() {
     else cout << "The mode of the array is " << mode(numbers, ARRAY_LENGTH, 10) << endl;
 
     delete[] numbers;
-    cout << numbers[5] << endl;
     numbers = NULL; // to eliminate a possible cross-reference later on
 
     return 0;
