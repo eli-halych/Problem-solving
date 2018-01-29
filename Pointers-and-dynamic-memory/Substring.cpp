@@ -27,7 +27,7 @@ int length(arrayString s);
 
 int main() {
 
-    arrayString string = new char[7];
+    arrayString string = new char[5];
     string[0] = 't', string[1] = 'e', string[2] = 's', string[3] = 't', string[4] = 0;
     arrayString newString = substring(string, 2, 4); // (string, startIndex, newLength)
 
