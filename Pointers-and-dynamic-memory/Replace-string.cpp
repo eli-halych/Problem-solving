@@ -29,10 +29,10 @@ int length(arrayString s);
 int main() {
 
     arrayString string = new char[8];
-    string[0] = 's', string[1] = 't', string[2] = 'e',
-            string[3] = 's', string[4] = 't', string[5] = 'e', string[6] = 's', string[7] = 0;
+    string[0] = 'a', string[1] = 'b', string[2] = 'c',
+            string[3] = 'd', string[4] = 'e', string[5] = 'f', string[6] = 'g', string[7] = 0;
 
-    replaceString(string, "te", "|");
+    replaceString(string, "cfef", "|");
 
     cout << "New string: ";
     for (int i = 0; i < length(string); ++i) {
@@ -61,9 +61,13 @@ void replaceString(arrayString& source, arrayString target, arrayString replaceT
 
         if(source[i] == target[0]){
             for (int j = 0; j < targetLength; ++j) {
+                    if(source [i+j] != target [j]) { // protecting strings such as abcdefgh from targets like cfff
+                        append(beforeStr, source[i]);
+                        break;
+                    }
                     if (j == targetLength - 1){
 
-                        // let the magic happen here
+                        // let the magic happen here(replace the target string)
                         concatenate(beforeStr, replaceText);
                         i += targetLength - 1;
 
@@ -127,3 +131,4 @@ int length(arrayString s){
     while (s[count] != 0) count++;
     return count;
 }
+
