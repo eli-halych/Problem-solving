@@ -35,7 +35,7 @@ int main() {
     addRecord(sc,0003, 3);
     outputLinkedList(sc);
 
-    removeRecord(sc, 0002); //PROBLEM
+    removeRecord(sc, 0002);
     outputLinkedList(sc);
 
     return 0;
