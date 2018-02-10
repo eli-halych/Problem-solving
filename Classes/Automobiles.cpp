@@ -2,7 +2,7 @@
  *
  * Class implementation using the basic framework. The class stores the data for an automobile.
  * We'll have three pieces of data: a manufacturer name, model name(both strings) and a model year(int).
- * There're get/set methods for each data member. 
+ * There're get/set methods for each data member.
  *
  */
 
@@ -11,7 +11,7 @@
 using namespace std;
 
 
-//------------------------------------------------------------ student record class
+//------------------------------------------------------------ automobile record class
 class automobileRecord{
 public:
     automobileRecord();
@@ -71,7 +71,7 @@ void automobileRecord::setModel(string newModel) {
 }
 
 
-//------------------------------------------------------------ student list class
+//------------------------------------------------------------ automobile list class
 class automobileCollection{
 private:
     struct automobileNode{
