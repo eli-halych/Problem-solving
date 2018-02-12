@@ -1,38 +1,14 @@
-/*
- *
- * Class implementation using the basic framework. The class stores the data for an automobile.
- * We'll have three pieces of data: a manufacturer name, model name(both strings) and a model year(int).
- * There're get/set methods for each data member.
- *
- */
+#include<iostream>
+#include<time.h>
+#include "AutomobileCollection.h"
 
-#include <iostream>
+using std::to_string;
 
-using namespace std;
+
+
 
 
 //------------------------------------------------------------ automobile record class
-class automobileRecord{
-public:
-    automobileRecord();
-    automobileRecord(int newYear, string newManufacturer, string newModel);
-
-    int year();
-    void setYear(int newYear);
-
-    string manufacturer();
-    void setManufacturer(string newManufacturer);
-
-    string model();
-    void setModel(string newModel);
-
-
-private:
-    int _year;
-    string _manufacturer;
-    string _model;
-};
-
 
 //--------- constructors
 automobileRecord::automobileRecord() {
@@ -71,28 +47,12 @@ void automobileRecord::setModel(string newModel) {
 }
 
 
-//------------------------------------------------------------ automobile list class
-class automobileCollection{
-private:
-    struct automobileNode{
-        automobileRecord automobileData;
-        automobileNode * next;
-    };
-public:
-    automobileCollection();
-    ~automobileCollection();
-    automobileCollection(const automobileCollection& original);
-    void addRecord(automobileRecord newAutomobile);
-    automobileRecord recordWithModel(string model);
-    void removeRecord(string model);
-    automobileCollection& operator=(const automobileCollection & rhs);
-private:
-    typedef automobileNode * automobileList;
-    automobileList _listHead;
-    void deleteList(automobileList &listPtr);
-    automobileList copiedList(const automobileList original);
-};
 
+
+
+
+
+//------------------------------------------------------------ automobile list class
 
 //--------- default constructor / destructor / copy constructor
 automobileCollection::automobileCollection() {
@@ -182,29 +142,27 @@ automobileCollection::automobileList automobileCollection::copiedList(const auto
 
 //--------- operator overloading (helps to copy lists)
 automobileCollection& automobileCollection::operator=(const automobileCollection &rhs) {
-    // checking in case s1 = s1 or s2 = s1 = s1 etc., so we don't delete nodes at all
+    // checking in case c1 = c1 or c2 = c1 = c1 etc., so we don't delete nodes at all
     if (this != &rhs) {
-        // consider s1 = s2
-        deleteList(_listHead); // delete s1
-        _listHead = copiedList(rhs._listHead); // copy s2 to s1 starting from the head
+        // consider c1 = c2
+        deleteList(_listHead); // delete c1
+        _listHead = copiedList(rhs._listHead); // copy c2 to c1 starting from the head
     }
     return *this;
 }
 
+string automobileCollection::description(string model) {
+    automobileRecord record = recordWithModel(model);
 
-//------------------------------------------------------------
-int main() {
-
-    automobileCollection s1;
-    automobileRecord stu3(84, "A", "A");
-    automobileRecord stu2(75, "B", "B");
-    automobileRecord stu1(98, "B", "B");
-    s1.addRecord(stu3);
-    s1.addRecord(stu2);
-    s1.addRecord(stu1);
-    s1.removeRecord("B");
-
-    automobileCollection s2(s1); // uses copy constructor
-
-    return 0;
+    if (record.year() == -1) return model+" not found.";
+    else return to_string(record.year())+"   "+record.manufacturer()+"   "+record.model();
 }
+
+int automobileCollection::age(string model) {
+    time_t t = time(0);
+    struct tm* now = localtime(&t);
+
+    return (now->tm_year + 1900) - recordWithModel(model).year();
+
+}
+
