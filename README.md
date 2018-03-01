@@ -9,7 +9,7 @@ Based on "Think Like a Programmer" by V. Anton Spraul <br>
    down the editor's window. Editing functions at this stage is a lot easier.
 4. When everything is set to be working properly, convert the code into OOP.
 
-P.S. Don't forget about spacial and base cases.
+P.S. Don't forget about special and base cases.
 </pre>
 
 Notes:
